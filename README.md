@@ -12,6 +12,7 @@ import { NgXAsyncScripts } from 'ngx-asyncscripts';
 ```  
 
 2. Use in your component  
+For the second parameter of your dependencies array, you can use css or js.
 
 ```
 export class AppComponent {
@@ -22,11 +23,11 @@ export class AppComponent {
 
 		/**
 		 * Loads all the dependencies before proceeding
-		 * @type {Array}
+		 * @type {Array<Array<string | string>>}
 		 */
 		let dependencies = [
-			["//cdn.jsdelivr.net/medium-editor/latest/js/medium-editor.min.js", "js"],
-			["//cdn.jsdelivr.net/medium-editor/latest/css/medium-editor.min.css", "css"],
+			["<DEPENDENCY_URL", "js"],
+			["<DEPENDENCY_URL", "css"],
 		]
 
 		/**
