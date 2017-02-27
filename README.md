@@ -13,7 +13,7 @@ import { NgXAsyncScripts } from 'ngx-asyncscripts';
 ```    
 
 **Use in your component**  
-*For the second parameter of your dependencies array, you can use **css** or **js***  
+*For the second parameter of your dependencies array, you can use css or js*
 
 ```
 export class AppComponent {
