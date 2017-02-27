@@ -19,7 +19,7 @@ import { NgXAsyncScripts } from 'ngx-asyncscripts';
 export class AppComponent {
 
 
-	constructor(private asyncLoaderService: NgXAsyncScripts)
+	constructor(private asnycScriptsService: NgXAsyncScripts)
 	{
 
 		/**
@@ -35,7 +35,7 @@ export class AppComponent {
 		 * Load services and return a promise.
 		 * Do stuff after promise resolves
 		 */
-		asyncLoaderService.loadServices(dependencies).then(
+		asnycScriptsService.loadExternalDependencies(dependencies).then(
 			function(success){
 				console.log(success);
 			}, function(error){

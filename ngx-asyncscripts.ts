@@ -7,11 +7,11 @@ export class NgXAsyncScripts {
 
 	/**
 	 * Loads Provided scripts async for lazy loaded modules.
-	 * 
+	 *
 	 * @param  {Array<Array<string | string>>} externals array of links [["https://link", "css"], ["https://link", "js"]]
 	 * @return {[type]}                 [description]
 	 */
-	loadServices(externals: Array<Array<string | string>>): Promise<any> {
+	loadExternalDependencies(externals: Array<Array<string | string>>): Promise<any> {
 
 		return new Promise((resolveMain, rejectMain) => {
 
