@@ -1,18 +1,19 @@
 # ngx-asyncscripts
-Lazy load scripts in a Angular 2 lazy loaded module? No probs!  
+Lazy loading scripts in an Angular 2 lazy loaded module? No probs!  
 
 
 # How to install?  
 
 `$ npm install ngx-asyncscripts`   
 
-1. Import the Service  
+**Import the Service **   
+
 ```
 import { NgXAsyncScripts } from 'ngx-asyncscripts';
-```  
+```    
 
-2. Use in your component  
-For the second parameter of your dependencies array, you can use css or js.
+**Use in your component**
+*For the second parameter of your dependencies array, you can use **css** or **js**
 
 ```
 export class AppComponent {
