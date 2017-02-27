@@ -6,14 +6,14 @@ Lazy loading scripts in an Angular 2 lazy loaded module? No probs!
 
 `$ npm install ngx-asyncscripts`   
 
-**Import the Service **   
+**Import the Service**   
 
 ```
 import { NgXAsyncScripts } from 'ngx-asyncscripts';
 ```    
 
-**Use in your component**
-*For the second parameter of your dependencies array, you can use **css** or **js**
+**Use in your component**  
+*For the second parameter of your dependencies array, you can use **css** or **js***  
 
 ```
 export class AppComponent {

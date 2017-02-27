@@ -1,0 +1,28 @@
+{
+  "name": "ngx-asyncscripts",
+  "version": "1.0.1",
+  "description": "Lazy loading scripts in an Angular 2 lazy loaded module? No probs!  ",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zenkkor/ngx-asyncscripts.git"
+  },
+  "keywords": [
+    "angular",
+    "angular2",
+    "async",
+    "scripts",
+    "external",
+    "load",
+    "promise"
+  ],
+  "author": "Rok Knez <rok@zenk.si> (http://zenk.si)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zenkkor/ngx-asyncscripts/issues"
+  },
+  "homepage": "https://github.com/zenkkor/ngx-asyncscripts#readme"
+}
