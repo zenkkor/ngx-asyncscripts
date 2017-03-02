@@ -8,10 +8,10 @@ export class NgXAsyncScripts {
 	/**
 	 * Loads Provided scripts async for lazy loaded modules.
 	 *
-	 * @param  {Array<Array<string | string>>} externals array of links [["https://link", "css"], ["https://link", "js"]]
+	 * @param  {Array<Array<string | string | any>>} externals array of links [["https://link", "css"], ["https://link", "js"]]
 	 * @return {[type]}                 [description]
 	 */
-	loadExternalDependencies(externals: Array<Array<string | string>>): Promise<any> {
+	loadExternalDependencies(externals: Array<Array<string | string | any>>): Promise<any> {
 
 		return new Promise((resolveMain, rejectMain) => {
 
@@ -24,6 +24,11 @@ export class NgXAsyncScripts {
 					let externalSrc  = externalScript[0];
 					let type = externalScript[1];
 
+					let extraAttributes = {};
+					if (typeof externalScript[2] != "undefined") {
+						extraAttributes = externalScript[2];
+					}
+
 					switch(type)
 					{
 						case 'js':
@@ -31,6 +36,11 @@ export class NgXAsyncScripts {
 							const script = document.createElement('script');
 							script.async = true;
 							script.src = externalSrc;
+
+							for (let key in extraAttributes) {
+							    let value = extraAttributes[key];
+								script.setAttribute(key, value);
+							}
 
 							// Resolve promises event listener
 							script.addEventListener('load', resolve);
@@ -43,10 +53,15 @@ export class NgXAsyncScripts {
 						}
 						case 'css':
 						{
-							var link = document.createElement('link')
-							link.setAttribute('rel', 'stylesheet')
-							link.setAttribute('type', 'text/css')
-							link.setAttribute('href', externalSrc)
+							var link = document.createElement('link');
+							link.setAttribute('rel', 'stylesheet');
+							link.setAttribute('type', 'text/css');
+							link.setAttribute('href', externalSrc);
+
+							for (let key in extraAttributes) {
+							    let value = extraAttributes[key];
+								link.setAttribute(key, value);
+							}
 
 							// Resolve promises event listener
 							link.addEventListener('load', resolve);
