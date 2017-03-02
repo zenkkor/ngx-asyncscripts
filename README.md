@@ -14,6 +14,7 @@ import { NgXAsyncScripts } from 'ngx-asyncscripts';
 
 **Use in your component**  
 *For the second parameter of your dependencies array, you can use css or js*
+*Provide any additional attributes in the third parameter as an object*
 
 ```
 export class AppComponent {
@@ -24,11 +25,12 @@ export class AppComponent {
 
 		/**
 		 * Loads all the dependencies before proceeding
-		 * @type {Array<Array<string | string>>}
+		 * @type {Array<Array<string | string | any>>}
 		 */
 		let dependencies = [
 			["<DEPENDENCY_URL", "js"],
 			["<DEPENDENCY_URL", "css"],
+			["<DEPENDENCY_URL", "js", {"data-cfasync": "false"}],
 		]
 
 		/**
