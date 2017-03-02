@@ -1,6 +1,6 @@
 {
   "name": "ngx-asyncscripts",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Lazy loading scripts in an Angular 2 lazy loaded module? No probs!  ",
   "main": "index.ts",
   "scripts": {
